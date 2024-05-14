@@ -15,6 +15,10 @@ const {
 // */2 * * * * - 2 minutes
 // * * * * * * - 1 second
 
+app.use('/', async (req, res, next) => {
+  return res.send('Hello World')
+})
+
 app.use('/testing', async (req, res, next) => {
   return res.status(200).json({
     message: 'Service running successfully',
