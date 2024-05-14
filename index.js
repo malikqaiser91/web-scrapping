@@ -39,3 +39,5 @@ cron.schedule('* * * * * *', async () => {
     console.error(`Error: ${error}`)
   }
 })
+
+module.exports = app
