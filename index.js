@@ -15,7 +15,7 @@ const {
 // */2 * * * * - 2 minutes
 // * * * * * * - 1 second
 
-app.use('/', async (req, res, next) => {
+app.get('/', async (req, res, next) => {
   return res.send('Hello World')
 })
 
