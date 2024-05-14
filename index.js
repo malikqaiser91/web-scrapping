@@ -1,5 +1,8 @@
+const express = require('express')
 const cron = require('node-cron')
 require('dotenv').config()
+
+const app = express()
 
 const {
   sendSMS,
@@ -23,9 +26,6 @@ cron.schedule('* * * * * *', async () => {
     const result = await getContent()
     // const isAvailable = checkForText(result, process.env.APPOINTMENT_TEXT)
     // console.log('Is Available', isAvailable)
-
-    console.log(result)
-
     if (result) {
       await sendSMS()
       await sendWhatsAppText()
