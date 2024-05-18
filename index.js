@@ -25,7 +25,7 @@ app.use('/testing', async (req, res, next) => {
   })
 })
 
-cron.schedule('* * * * * *', async () => {
+cron.schedule('*/2 * * * *', async () => {
   try {
     const result = await getContent()
     // const isAvailable = checkForText(result, process.env.APPOINTMENT_TEXT)

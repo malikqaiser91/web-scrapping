@@ -109,6 +109,7 @@ const voiceCall = async () => {
 const getContent = async () => {
   try {
     const response = await axios.get(process.env.GERMAN_EMBASSY_URL)
+    console.log('Response', response)
     const $ = cheerio.load(response.data)
     const selectList = $('#appointment_newAppointmentForm_fields_3__content')
 
